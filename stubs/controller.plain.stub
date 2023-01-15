@@ -1,0 +1,22 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class {{ class }} extends Controller
+{
+    //index
+    public function index() {
+
+    }
+    //show 
+    public function show() {
+
+    }
+    //store 
+    public function store () {
+        
+    }
+}
