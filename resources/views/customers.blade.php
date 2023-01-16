@@ -19,10 +19,15 @@
             </tr>
         </thead>
         <tbody>
+        @php
+            $count = 0;
+        @endphp
             @foreach ($data as $item)
-                
+            @php
+                $count ++;
+            @endphp
             <tr class="">
-                <td scope="row">{{$item->id}}</td>
+                <td scope="row">{{$count}}</td>
                 <td>{{$item->name}}</td>
                 <td>{{$item->address}}</td>
                 <td>{{$item->age}}</td>

@@ -55,4 +55,24 @@ class usercontroller extends Controller
             abort('404');
         }
     }
+
+    //edit 
+    public function edit($id) {
+        $customer = Customers::find($id);
+        return view('edit',
+    [
+        'customer' => $customer,
+    ]);
+    }
+    //store change 
+    public function update(Request $data, $id) {
+        $customer = Customers::find($id);
+        $customer->name = $data['name'];
+        $customer->address = $data['address'];
+        $customer->age = $data['age'];
+        $customer->birth = $data['birthdate'];
+        $customer->phone = $data['phone'];
+        $customer->save();
+        return redirect('user');
+    }
 }
